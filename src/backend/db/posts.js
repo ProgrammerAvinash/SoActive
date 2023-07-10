@@ -9,69 +9,203 @@ import { formatDate } from "../utils/authUtils";
 export const posts = [
   {
     _id: uuid(),
-    content:
-      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.",
+    content: "Get fit ",
     likes: {
-      likeCount: 0,
-      likedBy: [],
+      likeCount: 3,
+      likedBy: [
+        {
+          _id: 2,
+          firstName: "John ",
+          lastName: "Smith",
+          username: "johnsmith@gmail.com",
+          password: "1234abcd",
+          userHandler: "johnsmith",
+          profilePic:
+            "https://images.unsplash.com/photo-1613685044678-0a9ae422cf5a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjN8fGZpdG5lc3N8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60",
+
+          link: "",
+          bio: "",
+          bookmarks: [],
+          followers: [],
+          following: [],
+          createdAt: formatDate(2021, 6, 18, 26, 30),
+          updatedAt: formatDate(),
+        },
+        {
+          _id: uuid(),
+          firstName: "Nina",
+          lastName: "Jones",
+          username: "Nickj@gmail.com",
+          password: "Nickj",
+          userHandler: "Nickj",
+          profilePic:
+            "https://images.unsplash.com/photo-1593431763017-c689a61b729a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzB8fGZpdG5lc3N8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60",
+
+          link: "",
+          bio: "",
+          bookmarks: [],
+          followers: [],
+          following: [],
+          createdAt: formatDate(2022, 9, 12, 26, 30),
+          updatedAt: formatDate(),
+        },
+        {
+          _id: uuid(),
+          firstName: "user",
+          lastName: "dummy",
+          username: "userD@gmail.com",
+          password: "Dummy123",
+          userHandler: "Dummy",
+          profilePic:
+            "https://images.unsplash.com/photo-1593431763017-c689a61b729a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzB8fGZpdG5lc3N8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60",
+
+          bookmarks: [],
+          followers: [],
+          following: [],
+          createdAt: formatDate(2021, 8, 22, 26, 30),
+          updatedAt: formatDate(),
+        },
+      ],
       dislikedBy: [],
     },
-    username: "adarshbalika",
-    createdAt: formatDate(),
-    updatedAt: formatDate(),
     comments: [
       {
         _id: uuid(),
-        username: "shubhamsoni",
-        text: "Interesting",
-        votes: {
-          upvotedBy: [],
-          downvotedBy: [],
-        },
-      },
-      {
-        _id: uuid(),
-        username: "sohamshah",
-        text: "Wow!",
-        votes: {
-          upvotedBy: [],
-          downvotedBy: [],
-        },
+        username: "Nickj@gmail.com",
+        text: "Great !",
       },
     ],
+    username: "avinash.yadav271@gmail.com",
+    profilePic:
+      "https://images.pexels.com/photos/2827392/pexels-photo-2827392.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    userHandler: "AvinashY",
+    file: "https://images.unsplash.com/photo-1613685044678-0a9ae422cf5a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjN8fGZpdG5lc3N8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60",
+
+    createdAt: new Date(2022, 11, 9, 11, 10, 18),
+    updatedAt: formatDate(),
   },
   {
     _id: uuid(),
-    content:
-      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.",
+    content: "Gym is fun  ",
     likes: {
-      likeCount: 0,
-      likedBy: [],
+      likeCount: 4,
+      likedBy: [
+        {
+          _id: 2,
+          firstName: "John ",
+          lastName: "Smith",
+          username: "johnsmith@gmail.com",
+          password: "1234abcd",
+          userHandler: "johnsmith",
+          profilePic:
+            "https://images.unsplash.com/photo-1613685044678-0a9ae422cf5a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjN8fGZpdG5lc3N8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60",
+
+          link: "",
+          bio: "",
+          bookmarks: [],
+          followers: [],
+          following: [],
+          createdAt: formatDate(2001, 5, 15, 26, 30),
+          updatedAt: formatDate(),
+        },
+
+        {
+          _id: uuid(),
+          firstName: "Nina",
+          lastName: "Jones",
+          username: "Nickj@gmail.com",
+          password: "Nickj",
+          userHandler: "Nickj",
+          profilePic:
+            "https://images.unsplash.com/photo-1593431763017-c689a61b729a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzB8fGZpdG5lc3N8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60",
+
+          link: "",
+          bio: "",
+          bookmarks: [],
+          followers: [],
+          following: [],
+          createdAt: formatDate(2021, 5, 12, 26, 30),
+          updatedAt: formatDate(),
+        },
+        {
+          _id: uuid(),
+          firstName: "user",
+          lastName: "dummy",
+          username: "userD@gmail.com",
+          password: "Dummy123",
+          userHandler: "Dummy",
+          profilePic:
+            "https://images.unsplash.com/photo-1593431763017-c689a61b729a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzB8fGZpdG5lc3N8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60",
+
+          bookmarks: [],
+          followers: [],
+          following: [],
+          createdAt: formatDate(2021, 5, 25, 26, 30),
+          updatedAt: formatDate(),
+        },
+      ],
       dislikedBy: [],
     },
-    username: "shubhamsoni",
-
     comments: [
       {
         _id: uuid(),
-        username: "shubhamsoni",
-        text: "Interesting",
-        votes: {
-          upvotedBy: [],
-          downvotedBy: [],
-        },
+        username: "Nickj@gmail.com",
+        text: "Great keep it up!",
       },
       {
         _id: uuid(),
-        username: "sohamshah",
+        username: "johnsmith@gmail.com",
         text: "Wow!",
-        votes: {
-          upvotedBy: [],
-          downvotedBy: [],
-        },
       },
     ],
-    createdAt: formatDate(),
+    username: "avinash.yadav271@gmail.com",
+    profilePic:
+      "https://images.pexels.com/photos/2827392/pexels-photo-2827392.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    userHandler: "AvinashY",
+    file: "https://images.pexels.com/photos/2827392/pexels-photo-2827392.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    createdAt: new Date(2023, 1, 9, 11, 10, 18),
+    updatedAt: formatDate(),
+  },
+  {
+    _id: uuid(),
+    content: "Run Run Run !! ",
+    likes: {
+      likeCount: 2,
+      likedBy: [
+        {
+          _id: 2,
+          firstName: "John ",
+          lastName: "Smith",
+          username: "johnsmith@gmail.com",
+          password: "1234abcd",
+          userHandler: "johnsmith",
+          profilePic:
+            "https://images.unsplash.com/photo-1613685044678-0a9ae422cf5a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjN8fGZpdG5lc3N8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60",
+
+          link: "",
+          bio: "",
+          bookmarks: [],
+          followers: [],
+          following: [],
+          createdAt: formatDate(2020, 5, 19, 26, 30),
+          updatedAt: formatDate(),
+        },
+      ],
+      dislikedBy: [],
+    },
+    comments: [
+      {
+        _id: uuid(),
+        username: "johnsmith@gmail.com",
+        text: "Good !",
+      },
+    ],
+    username: "avinash.yadav271@gmail.com",
+    profilePic:
+      "https://images.pexels.com/photos/2827392/pexels-photo-2827392.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    userHandler: "AvinashY",
+    file: "https://images.pexels.com/photos/2827392/pexels-photo-2827392.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    createdAt: new Date(2023, 5, 18, 12, 8, 15),
     updatedAt: formatDate(),
   },
 ];
