@@ -1,0 +1,104 @@
+.profile-outerContainer {
+
+  background-color: var(--secondary);
+
+  padding-top: 0.8rem;
+  min-height: 100vh;
+  max-height: fit-content;
+
+}
+
+.profile-mainContainer {
+  background-color: var(--secondary);
+  border-radius: 0.5rem;
+}
+
+.profile-innerContainer {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0rem;
+  border-radius: 0.5rem;
+  margin-top: 0rem;
+  background-color: #f9f9f9;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.profile-user-logo {
+  height: 140px;
+  width: 140px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.EditBtn {
+  background-color: #312d7a;
+  padding: 0.7rem;
+  color: white;
+  border: none;
+  border-radius: 0.3rem;
+  -webkit-border-radius: 0.3rem;
+  -moz-border-radius: 0.3rem;
+  -ms-border-radius: 0.3rem;
+  -o-border-radius: 0.3rem;
+  cursor: pointer;
+}
+.EditBtn:hover {
+  background-color: var(--primary);
+}
+.profile-heading {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+.profile-innerHeading {
+  display: flex;
+  flex-direction: column;
+}
+.profile-edit-btn {
+  padding: 0.4rem;
+  background-color: var(--primary);
+  color: white;
+}
+.profile-link {
+  color: blueviolet;
+  margin: 0.5rem 0rem;
+  text-decoration: none;
+}
+
+.modalFollowing {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modalContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.profile-follow-hr {
+  border-top: 1.4px solid #ccc;
+  display: flex;
+}
+.inner-profile-follow-count {
+  padding: 0.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}

@@ -56,6 +56,17 @@ export const editUserHandler = function (schema, request) {
       );
     }
     const { userData } = JSON.parse(request.requestBody);
+    // console.log(userData && userData.username && userData.username !== user.username);
+    if (userData && userData.username && userData.username !== user.username) {
+      return new Response(
+        404,
+        {},
+        {
+          errors: ["Username cannot be changed"],
+        }
+      );
+    }
+
     user = { ...user, ...userData, updatedAt: formatDate() };
     this.db.users.update({ _id: user._id }, user);
     return new Response(201, {}, { user });
@@ -104,7 +115,6 @@ export const getBookmarkPostsHandler = function (schema, request) {
  * This handler handles adding a post to user's bookmarks in the db.
  * send POST Request at /api/users/bookmark/:postId/
  * */
-
 export const bookmarkPostHandler = function (schema, request) {
   const { postId } = request.params;
   const post = schema.posts.findBy({ _id: postId }).attrs;
@@ -122,7 +132,7 @@ export const bookmarkPostHandler = function (schema, request) {
       );
     }
     const isBookmarked = user.bookmarks.some(
-      (currPost) => currPost._id === postId
+      (currPostId) => currPostId === postId
     );
     if (isBookmarked) {
       return new Response(
@@ -131,7 +141,7 @@ export const bookmarkPostHandler = function (schema, request) {
         { errors: ["This Post is already bookmarked"] }
       );
     }
-    user.bookmarks.push(post);
+    user.bookmarks.push(post._id);
     this.db.users.update(
       { _id: user._id },
       { ...user, updatedAt: formatDate() }
@@ -169,15 +179,16 @@ export const removePostFromBookmarkHandler = function (schema, request) {
       );
     }
     const isBookmarked = user.bookmarks.some(
-      (currPost) => currPost._id === postId
+      (currPostId) => currPostId === postId
     );
     if (!isBookmarked) {
       return new Response(400, {}, { errors: ["Post not bookmarked yet"] });
     }
     const filteredBookmarks = user.bookmarks.filter(
-      (currPost) => currPost._id !== postId
+      (currPostId) => currPostId !== postId
     );
     user = { ...user, bookmarks: filteredBookmarks };
+
     this.db.users.update(
       { _id: user._id },
       { ...user, updatedAt: formatDate() }
@@ -215,6 +226,17 @@ export const followUserHandler = function (schema, request) {
         }
       );
     }
+
+    if (user._id === followUser._id) {
+      return new Response(
+        404,
+        {},
+        {
+          errors: ["You cannot follow yourself"],
+        }
+      );
+    }
+
     const isFollowing = user.following.some(
       (currUser) => currUser._id === followUser._id
     );

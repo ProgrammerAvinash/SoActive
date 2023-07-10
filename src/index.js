@@ -1,15 +1,23 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
+import { BrowserRouter as Router } from "react-router-dom";
 import { makeServer } from "./server";
+import { AuthContextProvider } from "./Context/AuthContext";
+import { DataContextProvider } from "./Context/DataContext";
 
-// Call make Server
 makeServer();
 
-ReactDOM.render(
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
   <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById("root")
+    <Router>
+      <AuthContextProvider>
+        <DataContextProvider>
+          <App />
+        </DataContextProvider>
+      </AuthContextProvider>
+    </Router>
+  </React.StrictMode>
 );
